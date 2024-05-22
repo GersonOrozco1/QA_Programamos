@@ -22,20 +22,20 @@ try:
         print("!Bienvenido a la página del registro¡")
         print("Por favor procede a llenar los campos")
 
-    mail = driver.find_element(By.XPATH, "//input[contains(@id,'email')]") .send_keys("walterchp@gmail.com")
+    mail = driver.find_element(By.XPATH, "//input[contains(@id,'email')]") .send_keys("Gerson@gmail.com")
     time.sleep(1)
     
-    password = driver.find_element(By.XPATH, "//input[contains(@name,'password')]") .send_keys("Prueba.01")
+    password = driver.find_element(By.XPATH, "//input[contains(@name,'password')]") .send_keys("gerson01")
     time.sleep(1)
     
-    confirmPassword = driver.find_element(By.XPATH, "//input[contains(@name,'confirmPassword')]") .send_keys("Prueba.01")
+    confirmPassword = driver.find_element(By.XPATH, "//input[contains(@name,'confirmPassword')]") .send_keys("gerson01")
     time.sleep(1)
     
     button = driver.find_element(By.XPATH, "//input[@src='images/submit.gif']") .click()
     time.sleep(2)
     
     confirmationMessage = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//b[contains(.,'Note: Your user name is walterchp@gmail.com.')]"))
+            EC.presence_of_element_located((By.XPATH, "//b[contains(.,'Note: Your user name is Gerson@gmail.com.')]"))
         )
     
     if confirmationMessage:
